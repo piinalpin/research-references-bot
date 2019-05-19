@@ -24,10 +24,14 @@ while True:
             try:
                 if "message" in item:
                     message = item["message"]["text"]
+                elif "sticker" in item:
+                    message = "Ok"
                 else:
                     message = item["edited_message"]["text"]
             except:
                 message = None
+            if message is None:
+                continue
             try:
                 from_ = item["message"]["from"]["id"]
             except:
