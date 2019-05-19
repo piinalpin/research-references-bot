@@ -88,7 +88,7 @@ class TensorFlow(object):
         data = pickle.load(open("training_data", "rb"))
         classes = data['classes']
         words = data['words']
-        self.model.load("model.tflearn")
+        self.model.load("./model.tflearn")
         results = self.model.predict([TensorFlow.bow(sentence, words)])[0]
         results = [[i, r] for i, r in enumerate(results) if r > self.ERROR_THRESHOLD]
         results.sort(key=lambda x: x[1], reverse=True)

@@ -58,7 +58,7 @@ def handle_message(event):
             title = list(dictionary["title"])[i].lstrip()
             url = list(dictionary["url"])[i].lstrip()
             year = list(dictionary["year"])[i]
-            msg = "*Author:* {}%0D%0A*Title:* {}%0D%0A*Url:* {}%0D%0A*Year:* {}".format(author, title, url, year)
+            msg = "*Author:* {}<br>*Title:* {}<br>*Url:* {}<br>*Year:* {}".format(author, title, url, year)
             line_bot_api.reply_message(
                 event.reply_token,
                 TextSendMessage(text=msg))
