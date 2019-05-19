@@ -48,7 +48,7 @@ class Engine(object):
             transform = self.vectorizer.fit_transform(self.phrase)
             scores = (transform[0, :] * transform[1:, :].T).A[0]
             self.dataset["score"] = scores
-            result = self.dataset.sort_values(by="score", ascending=False).head(10)
+            result = self.dataset.sort_values(by="score", ascending=False).head(5)
             dictionary = {
                 "author": result["author"],
                 "title": result["title"],
