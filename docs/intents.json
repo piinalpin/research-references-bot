@@ -6,11 +6,11 @@
         },
         {"tag": "thanks",
          "patterns": ["Terimakasih", "Okay", "Ok", "Makasih", "Makasih ya", "Thanks"],
-         "responses": ["Senang membantu anda.", "Okay, sama sama.", "Hubungi saya kalau anda ingin mencari referensi lagi"]
+         "responses": ["Senang membantu anda.", "Okay, sama sama.", "Hubungi saya kalau anda ingin mencari referensi lagi", "Okay, sama sama. Jangan lupa matikan notifikasi botnya biar gak mengganggu karena masih dalam tahap pengembangan"]
         },
         {"tag": "kabar",
          "patterns": ["Apa kabar?", "Bagaimana kabarnya?", "Gimana kabarnya?", "Gmn kabarnya?"],
-         "responses": ["Aaa, Kabar saya baik.", "Luar biasa.", "Baik sekali hari ini"]
+         "responses": ["Aaa, Kabar saya baik.", "Luar biasa.", "Baik sekali hari ini", "Alhamdulillah, baik."]
         }
    ]
 }
