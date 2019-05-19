@@ -52,6 +52,7 @@ class TensorFlow(object):
         self.train_y = list(self.training[:, 1])
 
     def set_model(self):
+        tf.reset_default_graph()
         net = tflearn.input_data(shape=[None, len(self.train_x[0])])
         net = tflearn.fully_connected(net, 8)
         net = tflearn.fully_connected(net, 8)
@@ -62,7 +63,7 @@ class TensorFlow(object):
         model.fit(self.train_x, self.train_y, n_epoch=1000, batch_size=8, show_metric=True)
         model.save('model.tflearn')
         pickle.dump({'words': self.words, 'classes': self.classes, 'train_x': self.train_x, 'train_y': self.train_y},
-                    open("training_data", "wb"))
+                    open("training_data2", "wb"))
         return model
 
     @staticmethod
@@ -84,7 +85,7 @@ class TensorFlow(object):
         return np.array(bag)
 
     def classify(self, sentence):
-        data = pickle.load(open("training_data", "rb"))
+        data = pickle.load(open("training_data2", "rb"))
         classes = data['classes']
         words = data['words']
         self.model.load("model.tflearn")
