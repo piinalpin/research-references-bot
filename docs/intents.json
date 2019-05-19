@@ -5,7 +5,7 @@
          "context_set": ""
         },
         {"tag": "thanks",
-         "patterns": ["Terimakasih", "Okay", "Okay", "Makasih", "Makasih ya", "Thanks"],
+         "patterns": ["Terimakasih", "Okay", "Ok", "Makasih", "Makasih ya", "Thanks"],
          "responses": ["Senang membantu anda.", "Okay, sama sama.", "Hubungi saya kalau anda ingin mencari referensi lagi"]
         },
         {"tag": "kabar",

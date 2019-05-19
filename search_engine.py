@@ -26,7 +26,7 @@ def preprocess(text):
 class Engine(object):
 
     def __init__(self, query):
-        self.dataset = pd.read_excel("docs/dataset_sample.xlsx")
+        self.dataset = pd.read_excel("docs/dataset_preprocessing.xlsx")
         self.query = preprocess(query)
         self.phrase = [self.query] + self.dataset["preprocessed_title"].tolist()
         self.vectorizer = TfidfVectorizer()
