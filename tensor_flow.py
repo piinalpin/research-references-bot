@@ -52,7 +52,6 @@ class TensorFlow(object):
         self.train_y = list(self.training[:, 1])
 
     def set_model(self):
-        tf.reset_default_graph()
         net = tflearn.input_data(shape=[None, len(self.train_x[0])])
         net = tflearn.fully_connected(net, 8)
         net = tflearn.fully_connected(net, 8)
