@@ -10,7 +10,7 @@ import os
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi('PmJtqckdfsQ21NL+kIgVHNVeraY4MQ/WTY+ysR8ZDPWRFCs8+LseFMWR1iRSLic0o0q0pUvnaEchYl1phF75ZYoNaVoEnt+z4wEaEOgI7+pEsGtRsiAS054smc17eLN2VV3fZ27VRVDjQfWugdKR6AdB04t89/1O/w1cDnyilFU=')
+line_bot_api = LineBotApi('dV+nd/GrdLaiKnQ1plwe8QuJ08HE6KSoccIzJxvJO7hx2TSE1QF4mS51TUYlxYr7o0q0pUvnaEchYl1phF75ZYoNaVoEnt+z4wEaEOgI7+rtxxJd6njG9HKsZK2Aj1fKU5iGtWQMq+zYRJLosfNXKgdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('44ea69c0b9b62849571e363d93e53127')
 
 

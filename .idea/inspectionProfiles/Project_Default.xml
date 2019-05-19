@@ -7,7 +7,7 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
-          <list size="36">
+          <list size="44">
             <item index="0" class="java.lang.String" itemvalue="absl-py" />
             <item index="1" class="java.lang.String" itemvalue="protobuf" />
             <item index="2" class="java.lang.String" itemvalue="tensorflow-estimator" />
@@ -44,6 +44,14 @@
             <item index="33" class="java.lang.String" itemvalue="pytz" />
             <item index="34" class="java.lang.String" itemvalue="idna" />
             <item index="35" class="java.lang.String" itemvalue="Pillow" />
+            <item index="36" class="java.lang.String" itemvalue="future" />
+            <item index="37" class="java.lang.String" itemvalue="python-decouple" />
+            <item index="38" class="java.lang.String" itemvalue="Click" />
+            <item index="39" class="java.lang.String" itemvalue="MarkupSafe" />
+            <item index="40" class="java.lang.String" itemvalue="itsdangerous" />
+            <item index="41" class="java.lang.String" itemvalue="line-bot-sdk" />
+            <item index="42" class="java.lang.String" itemvalue="Jinja2" />
+            <item index="43" class="java.lang.String" itemvalue="Flask" />
           </list>
         </value>
       </option>
