@@ -61,7 +61,7 @@ class Details(Base):
 
     @staticmethod
     def get_by_query_id(query_id):
-        data = session.query(Details).filter_by(query_id=query_id).limit(5).all()
+        data = session.query(Details).filter_by(query_id=query_id).order_by(Details.score.desc()).limit(5).all()
         result = list()
         for x in data:
             obj = {
