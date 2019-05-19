@@ -44,6 +44,7 @@ def callback():
 def handle_message(event):
     """ Here's all the messages will be handled and processed by the program """
     text = event.message.text
+    text = text.partition("tentang")
     if "tentang" not in text:
         reply = make_reply(text)
         line_bot_api.reply_message(

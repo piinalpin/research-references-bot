@@ -61,7 +61,7 @@ class TensorFlow(object):
 
         model = tflearn.DNN(net, tensorboard_dir="tflearn_logs")
         model.fit(self.train_x, self.train_y, n_epoch=1000, batch_size=8, show_metric=True)
-        model.save('model.tflearn1')
+        model.save('model.tflearn')
         pickle.dump({'words': self.words, 'classes': self.classes, 'train_x': self.train_x, 'train_y': self.train_y},
                     open("training_data", "wb"))
         return model
@@ -88,7 +88,7 @@ class TensorFlow(object):
         data = pickle.load(open("training_data", "rb"))
         classes = data['classes']
         words = data['words']
-        self.model.load("model.tflearn1")
+        self.model.load("model.tflearn")
         results = self.model.predict([TensorFlow.bow(sentence, words)])[0]
         results = [[i, r] for i, r in enumerate(results) if r > self.ERROR_THRESHOLD]
         results.sort(key=lambda x: x[1], reverse=True)
