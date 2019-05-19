@@ -22,10 +22,16 @@ while True:
         for item in updates:
             update_id = item["update_id"]
             try:
-                message = item["message"]["text"]
+                if "message" in item:
+                    message = item["message"]["text"]
+                else:
+                    message = item["edited_message"]["text"]
             except:
                 message = None
-            from_ = item["message"]["from"]["id"]
+            try:
+                from_ = item["message"]["from"]["id"]
+            except:
+                from_ = item["edited_message"]["from"]["id"]
             text = message.partition("tentang")
             if "tentang" not in text:
                 reply = make_reply(message)
