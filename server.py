@@ -12,6 +12,14 @@ app = Flask(__name__)
 
 line_bot_api = LineBotApi('dV+nd/GrdLaiKnQ1plwe8QuJ08HE6KSoccIzJxvJO7hx2TSE1QF4mS51TUYlxYr7o0q0pUvnaEchYl1phF75ZYoNaVoEnt+z4wEaEOgI7+rtxxJd6njG9HKsZK2Aj1fKU5iGtWQMq+zYRJLosfNXKgdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('44ea69c0b9b62849571e363d93e53127')
+resp = TensorFlow(intents="docs/intents.json")
+
+
+def make_reply(msg):
+    txt = None
+    if msg is not None:
+        txt = resp.response(msg)
+    return txt
 
 
 @app.route("/callback", methods=['POST'])
@@ -35,63 +43,26 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     """ Here's all the messages will be handled and processed by the program """
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=event.message.text))
+    text = event.message.text
+    if "tentang" not in text:
+        reply = make_reply(text)
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=reply))
+    else:
+        query = Engine(query=text[2].lstrip())
+        dictionary = query.get_scores()
+        for i in range(len(dictionary["author"])):
+            author = list(dictionary["author"])[i].lstrip()
+            title = list(dictionary["title"])[i].lstrip()
+            url = list(dictionary["url"])[i].lstrip()
+            year = list(dictionary["year"])[i]
+            msg = "*Author:* {}%0D%0A*Title:* {}%0D%0A*Url:* {}%0D%0A*Year:* {}".format(author, title, url, year)
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=msg))
 
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
-
-
-
-# update_id = None
-# resp = TensorFlow(intents="docs/intents.json")
-
-
-# def make_reply(msg):
-#     txt = None
-#     if msg is not None:
-#         txt = resp.response(msg)
-#     return txt
-#
-#
-# while True:
-#     print("....")
-#     bot = ChatBot("config.cfg")
-#     updates = bot.get_updates(offset=update_id)
-#     updates = updates["result"]
-#     if updates:
-#         for item in updates:
-#             update_id = item["update_id"]
-#             try:
-#                 if "message" in item:
-#                     message = item["message"]["text"]
-#                 elif "sticker" in item:
-#                     message = "Ok"
-#                 else:
-#                     message = item["edited_message"]["text"]
-#             except:
-#                 message = None
-#             if message is None:
-#                 continue
-#             try:
-#                 from_ = item["message"]["from"]["id"]
-#             except:
-#                 from_ = item["edited_message"]["from"]["id"]
-#             text = message.partition("tentang")
-#             if "tentang" not in text:
-#                 reply = make_reply(message)
-#                 bot.send_message(reply, from_)
-#             else:
-#                 query = Engine(query=text[2].lstrip())
-#                 dictionary = query.get_scores()
-#                 for i in range(len(dictionary["author"])):
-#                     author = list(dictionary["author"])[i].lstrip()
-#                     title = list(dictionary["title"])[i].lstrip()
-#                     url = list(dictionary["url"])[i].lstrip()
-#                     year = list(dictionary["year"])[i]
-#                     score = float(list(dictionary["score"])[i])
-#                     msg = "*Author:* {}%0D%0A*Title:* {}%0D%0A*Url:* {}%0D%0A*Year:* {}".format(author, title, url, year)
-#                     bot.send_message(msg, from_)
