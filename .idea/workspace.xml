@@ -48,8 +48,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/server.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="618">
-                  <caret line="60" column="70" selection-start-line="60" selection-start-column="70" selection-end-line="60" selection-end-column="70" />
+                <state relative-caret-position="548">
+                  <caret line="63" column="61" selection-start-line="63" selection-start-column="61" selection-end-line="63" selection-end-column="61" />
                   <folding>
                     <element signature="e#0#23#0" expanded="true" />
                   </folding>
@@ -60,7 +60,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tensor_flow.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="409">
+                <state relative-caret-position="391">
                   <caret line="90" column="27" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
                   <folding>
                     <element signature="e#0#58#0" expanded="true" />
@@ -143,6 +143,8 @@
       <find>word</find>
       <find>tf.</find>
       <find>tf</find>
+      <find>stemmer</find>
+      <find>stemmer`</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -221,12 +223,12 @@
       <option name="presentableId" value="Default" />
       <updated>1558214540053</updated>
       <workItem from="1558214545251" duration="25183000" />
-      <workItem from="1558271521133" duration="3642000" />
+      <workItem from="1558271521133" duration="4203000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28825000" />
+    <option name="totallyTimeSpent" value="29386000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -329,8 +331,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="60" column="70" selection-start-line="60" selection-start-column="70" selection-end-line="60" selection-end-column="70" />
+        <state relative-caret-position="548">
+          <caret line="63" column="61" selection-start-line="63" selection-start-column="61" selection-end-line="63" selection-end-column="61" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
@@ -339,7 +341,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tensor_flow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
+        <state relative-caret-position="391">
           <caret line="90" column="27" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />

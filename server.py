@@ -53,15 +53,15 @@ def handle_message(event):
     else:
         query = Engine(query=text[2].lstrip())
         dictionary = query.get_scores()
+        listMsg = list()
         for i in range(len(dictionary["author"])):
             author = list(dictionary["author"])[i].lstrip()
             title = list(dictionary["title"])[i].lstrip()
             url = list(dictionary["url"])[i].lstrip()
             year = list(dictionary["year"])[i]
-            msg = "*Author:* {}<br>*Title:* {}<br>*Url:* {}<br>*Year:* {}".format(author, title, url, year)
-            line_bot_api.reply_message(
-                event.reply_token,
-                TextSendMessage(text=msg))
+            msg = "*Author:* {}\n*Title:* {}\n*Url:* {}\n*Year:* {}".format(author, title, url, year)
+            listMsg.append(TextSendMessage(text=msg))
+        line_bot_api.reply_message(event.reply_token, listMsg)
 
 
 if __name__ == "__main__":
