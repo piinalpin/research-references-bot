@@ -52,7 +52,6 @@ def handle_message(event):
             TextSendMessage(text=reply))
     else:
         query = Engine(query=text[2].lstrip())
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="Ok, sebentar ya saya carikan."))
         dictionary = query.get_scores()
         listMsg = list()
         for i in range(len(dictionary["author"])):
