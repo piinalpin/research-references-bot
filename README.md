@@ -56,7 +56,7 @@ You can clone or download this project
 > Clone : git clone https://github.com/piinalpin/research-references-bot.git
 ```
 
-## Chat his
+## Chat His
 
 * Telegram Bot Chat : https://t.me/research_references_bot
 * LINE Bot Chat : http://line.me/ti/p/@437nryhw
