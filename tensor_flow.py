@@ -4,6 +4,7 @@ import numpy as np
 import tensorflow as tf
 
 stemmer = StemmerFactory().create_stemmer()
+nltk.download('punkt')
 
 
 class TensorFlow(object):
