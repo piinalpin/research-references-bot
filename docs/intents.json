@@ -1,0 +1,16 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "Halo", "Hai", "Hello"],
+         "responses": ["Hai, ada yang bisa dibantu?", "Halo, ada yang bisa saya bantu?", "Hai, saya adalah Bot. Saya akan membantu anda untuk mencari referensi judul penelitian yang terkait."],
+         "context_set": ""
+        },
+        {"tag": "thanks",
+         "patterns": ["Terimakasih", "Okay", "Okay", "Makasih", "Makasih ya", "Thanks"],
+         "responses": ["Senang membantu anda.", "Okay, sama sama.", "Hubungi saya kalau anda ingin mencari referensi lagi"]
+        },
+        {"tag": "kabar",
+         "patterns": ["Apa kabar?", "Bagaimana kabarnya?", "Gimana kabarnya?", "Gmn kabarnya?"],
+         "responses": ["Aaa, Kabar saya baik.", "Luar biasa.", "Baik sekali hari ini"]
+        }
+   ]
+}
