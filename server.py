@@ -42,6 +42,7 @@ while True:
                 bot.send_message(reply, from_)
             else:
                 query = Engine(query=text[2].lstrip())
+                bot.send_message("Ok. Tunggu sebentar ya saya carikan referensi nya.", from_)
                 dictionary = query.get_scores()
                 for i in range(len(dictionary["author"])):
                     author = list(dictionary["author"])[i].lstrip()
