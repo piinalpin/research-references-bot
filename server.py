@@ -1,4 +1,3 @@
-from bot import ChatBot
 from search_engine import Engine
 from tensor_flow import TensorFlow
 from flask import Flask, request, abort
