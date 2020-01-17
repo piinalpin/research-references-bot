@@ -1,6 +1,8 @@
 # Reference Research Bot
 This project will create search engine bot on telegram using TF IDF and Cosine Similarity.
 
+![Chat Bot](https://raw.githubusercontent.com/piinalpin/research-references-bot/master/docs/chatbot.gif)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -55,6 +57,11 @@ You can clone or download this project
 ```
 > Clone : git clone https://github.com/piinalpin/research-references-bot.git
 ```
+
+## Chat His
+
+* Telegram Bot Chat : https://t.me/research_references_bot
+* LINE Bot Chat : http://line.me/ti/p/@437nryhw
 
 ## Authors
 
